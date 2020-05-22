@@ -14,9 +14,10 @@ defmodule MetricsDemo.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: MetricsDemo.PubSub},
       # Start the Endpoint (http/https)
-      MetricsDemoWeb.Endpoint
+      MetricsDemoWeb.Endpoint,
       # Start a worker by calling: MetricsDemo.Worker.start_link(arg)
       # {MetricsDemo.Worker, arg}
+      MetricsDemo.MetricsGenerator
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

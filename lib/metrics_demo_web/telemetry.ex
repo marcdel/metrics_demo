@@ -31,6 +31,11 @@ defmodule MetricsDemoWeb.Telemetry do
         unit: {:native, :millisecond}
       ),
 
+      # App Metrics
+      counter("metrics_demo.render.controller"),
+      summary("metrics_demo.work.duration"),
+      summary("metrics_demo.work.result_count"),
+
       # Database Metrics
       summary("metrics_demo.repo.query.total_time", unit: {:native, :millisecond}),
       summary("metrics_demo.repo.query.decode_time", unit: {:native, :millisecond}),
