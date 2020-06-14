@@ -20,7 +20,7 @@ defmodule MetricsDemo.MixProject do
   def application do
     [
       mod: {MetricsDemo.Application, []},
-      extra_applications: [:logger, :runtime_tools, :os_mon]
+      extra_applications: [:logger, :runtime_tools, :os_mon, :opentelemetry]
     ]
   end
 
@@ -49,7 +49,9 @@ defmodule MetricsDemo.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:phx_gen_auth, "~> 0.3.0", only: [:dev], runtime: false}
+      {:phx_gen_auth, "~> 0.3.0", only: [:dev], runtime: false},
+      {:opentelemetry_api, "~> 0.3.2"},
+      {:opentelemetry_zipkin, "~> 0.3.0"}
     ]
   end
 
