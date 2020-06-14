@@ -33,6 +33,7 @@ defmodule MetricsDemo.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bcrypt_elixir, "~> 2.0"},
       {:phoenix, "~> 1.5.3"},
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
@@ -47,7 +48,8 @@ defmodule MetricsDemo.MixProject do
       {:telemetry_metrics_statsd, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:phx_gen_auth, "~> 0.3.0", only: [:dev], runtime: false}
     ]
   end
 
