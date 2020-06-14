@@ -33,8 +33,8 @@ defmodule MetricsDemoWeb.Telemetry do
 
       # App Metrics
       counter("metrics_demo.render.controller"),
-      summary("metrics_demo.work.duration"),
-      summary("metrics_demo.work.result_count"),
+      summary("metrics_demo.work_completed.duration"),
+      summary("metrics_demo.work_completed.result_count"),
 
       # Database Metrics
       summary("metrics_demo.repo.query.total_time", unit: {:native, :millisecond}),
